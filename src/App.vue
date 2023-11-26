@@ -1,4 +1,5 @@
 <script setup>
+import LoadingScreen from './components/LoadingScreen.vue'
 import Home from './views/Home.vue'
 import Tabs from './views/Tabs.vue'
 import AboutUs from './views/AboutUs.vue'
@@ -9,6 +10,7 @@ import ContactUs from './views/ContactUs.vue'
 </script>
 
 <template>
+  <LoadingScreen />
   <Home/>
   <Tabs />
   <AboutUs />
@@ -30,4 +32,5 @@ import ContactUs from './views/ContactUs.vue'
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+
 </style>

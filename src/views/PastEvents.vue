@@ -23,7 +23,7 @@ export default {
 <style scoped>
 #pastEvents {
   position: relative;
-  background-image: url('../assets/pastEvents.png');
+  background-image: url('../assets/pastEvents.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;

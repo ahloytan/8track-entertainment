@@ -1,14 +1,13 @@
 <template>
   <div id="aboutUs" class="py-14 text-white">
-    <p class="text-h4 text-md-h2 pb-10">About Us</p>
-    <p class="text-h6 text-md-h4 py-4">A dedicated team of <span class="font-italic highlight">Event Enthusiasts</span></p>
-    <p class="text-h6 text-md-h4 py-4">Transforming ideas into unforgettable experiences</p>
-    <p class="text-h6 text-md-h4 py-4">Sharing moments that go beyond the <span class="font-italic highlight">Ordinary</span>.</p>
+    <p class="text-h4 pb-10">About Us</p> <!-- text-xl-h2 -->
+    <p class="text-h6 py-4">A dedicated team of <span class="font-italic highlight">Event Enthusiasts</span></p> <!-- text-xl-h4 -->
+    <p class="text-h6 py-4">Transforming ideas into unforgettable experiences</p>
+    <p class="text-h6 py-4">Sharing moments that go beyond the <span class="font-italic highlight">Ordinary</span>.</p>
     <div class="d-flex justify-center align-center mt-4">
       <v-btn density="default" rounded="xl" elevation="4" variant="outlined">Private</v-btn>
-      <v-btn density="default" rounded="xl" elevation="4" class="mx-4 mx-md-8 mx-lg-32">Corporate</v-btn>
-      <!-- <v-btn density="default" rounded="xl" elevation="4" variant="plain">Public</v-btn> -->
-      <a href="" class="text-decoration-underline text-white text-h6">Public</a>
+      <v-btn density="default" rounded="xl" elevation="4" class="mx-4 mx-md-8 mx-lg-32" variant="outlined">Corporate</v-btn>
+      <v-btn density="default" rounded="xl" elevation="4" variant="outlined">Public</v-btn>
     </div>
   </div>
 </template>
@@ -22,7 +21,7 @@
 }
 
 p, btn, a {
-  font-family: "Kudryashev Display Sans" !important;
+  font-family: "KudryashevDisplay" !important;
 }
 
 .highlight {
