@@ -1,7 +1,15 @@
 <template>
   <div id="pastEvents">
-    <div id="textHolder" class="alignCenter">
-      <img :src="imgSource">
+    <div id="textHolder">
+      <v-carousel hide-delimiters touch show-arrows="hover">
+        <v-carousel-item :key="i" v-for="i in carousel">
+          <v-layout row>
+            <v-col xs4 :key="j" v-for="j in i" cols="3" class="pa-0">
+              <v-img :src="getImageUrl(j.img)" alt=""></v-img>
+            </v-col>
+          </v-layout>
+        </v-carousel-item>
+      </v-carousel>
     </div>
   </div>
 </template>
@@ -9,13 +17,45 @@
 export default {
   data() {
     return {
+      carousel: 
+        {
+          0: [ 
+            {
+              img: '260.webp'
+            },
+            {
+              img: '895.webp'
+            },
+            {
+              img: 'herd2.webp'
+            },
+            {
+              img: '2633.webp'
+            },  
+          ],
+          1: [ 
+            {
+              img: '4173.webp'
+            },
+            {
+              img: 'herd1.webp'
+            },
+            {
+              img: '860.webp'
+            },
+            {
+              img: '1156.webp'
+            },  
+          ],          
+        }
+      
     }
   },
   computed: {
-    imgSource() {
-      let image = 'pE1';
-      if (window.innerWidth <= 420) image = 'pE2';
-      return new URL(`../assets/${image}.png`, import.meta.url).href
+    getImageUrl() {
+      return (name) => {
+        return new URL(`../assets/${name}`, import.meta.url).href
+      }
     }
   }
 }
@@ -23,19 +63,11 @@ export default {
 <style scoped>
 #pastEvents {
   position: relative;
-  background-image: url('../assets/pastEvents.jpg');
   background-size: cover;
   background-position: center;
-  height: 100vh;
 }
 
-.alignCenter {
-  position:absolute;
-  display:block;
-  left:0;
-  right:0;
-  top: 25%;
-  margin:auto;
-  z-index: 99;
+.v-carousel {
+  height: auto !important;
 }
 </style>

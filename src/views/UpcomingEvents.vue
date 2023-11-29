@@ -1,7 +1,7 @@
 <template>
   <v-container fluid id="upcomingEvents" class="pa-0">
-    <div id="textHolder" class="alignCenter">
-      <v-carousel hide-delimiters>
+    <div id="textHolder">
+      <v-carousel hide-delimiters touch>
         <v-carousel-item
           v-for="item in carousel"
           :src="getImageUrl(item.background)"
@@ -10,29 +10,29 @@
           <div class="content">
             <v-row no-gutters>
               <v-col class="fullCol d-flex flex-column justify-center align-center text-white" cols="12" md="6">
-                <p class="text-h5 py-10 kd">COMING SOON</p>
+                <p class="text-h6 text-md-h5 py-10 kd">COMING SOON</p>
                 <div>
-                  <p class="text-h2 kd font-weight-black">{{ item.eventTitle }}</p>
+                  <p class="text-h5 text-h2 kd font-weight-black">{{ item.eventTitle }}</p>
                 </div>
               </v-col>
-              <v-col class="text-white pa-4 pa-md-12">
+              <v-col class="text-white pa-8 pa-md-12">
                 <div id="eventDetail" class="rounded-xl pa-8">
                   <div class="text-md-left">
-                    <p class="text-h4 kd">{{ item.eventTitle }}</p>
-                    <p class="text-h6 kd">{{ item.starring }}</p>
-                    <p class="text-h6 kd">{{ item.music }}</p>
+                    <p class="text-h5 text-md-h4 kd">{{ item.eventTitle }}</p>
+                    <p class="text-subtitle-1 text-md-h6 kd">{{ item.starring }}</p>
+                    <p class="text-subtitle-1 text-md-h6 kd">{{ item.music }}</p>
                   </div>
                   <v-row class="my-10 text-md-left">
                     <v-col>
-                      <div class="text-h3 kd font-weight-bold">{{ item.startTime }}</div>
-                      <div class="text-h5 kd">START TIME</div>
+                      <div class="text-h4 text-md-h3 kd font-weight-bold">{{ item.startTime }}</div>
+                      <div class="text-h6 text-md-h5 kd">START TIME</div>
                     </v-col>
                     <v-col>
-                      <div class="text-h3 kd font-weight-bold">{{ item.duration }}</div>
-                      <div class="text-h5 kd">DURATION</div>
+                      <div class="text-h4 text-md-h3 kd font-weight-bold">{{ item.duration }}</div>
+                      <div class="text-h6 text-md-h5 kd">DURATION</div>
                     </v-col>
                   </v-row>
-                  <div class="text-h6 kd">{{ item.location }}</div>
+                  <div class="text-subtitle-1 text-md-h6 kd">{{ item.location }}</div>
                   <div class="my-4">
                     <v-btn density="default" elevation="4" rounded="xl" class="text-white" size="x-large">BUY TICKETS</v-btn>
                   </div>
@@ -90,26 +90,10 @@ export default {
 }
 </script>
 <style scoped>
-#upcomingEvents {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  height: 80vh;
-}
-
 #eventDetail{
   background-color: rgba(255,255,255,0.25);
 }
 
-.alignCenter {
-  position:absolute;
-  display:block;
-  left:0;
-  right:0;
-  top: 0;
-  margin:auto;
-  z-index: 99;
-}
 
 .v-carousel {
   height: auto !important;
@@ -117,17 +101,5 @@ export default {
 
 .v-btn {
   background: linear-gradient(to right, #FF66C4, #CB6CE6);
-}
-
-@media only screen and (max-width: 768px) {
-  .alignCenter {
-    position:absolute;
-    display:block;
-    left:0;
-    right:0;
-    top: 0;
-    margin:auto;
-    z-index: 99;
-  }
 }
 </style>

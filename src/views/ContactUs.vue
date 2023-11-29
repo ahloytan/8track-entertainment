@@ -22,7 +22,7 @@
             <div class="dark kd text-white">7 Temasek Boulevard Suntec Tower One #12-07 Singapore 038987</div>
           </v-col>
           <v-col cols="12" class="mt-4">
-            <div class="dark kd text-white">Coded by <a target="_blank" href="https://ahloytan.netlify.app">Aloysius</a></div>
+            <div class="dark kd text-white">Coded by <a target="_blank" href="https://ahloytan.netlify.app" class="text-decoration-underline">ahloytan</a></div>
           </v-col>
         </v-row>
       </v-footer>

@@ -2,7 +2,7 @@
     <div v-if="!allImagesLoaded" id="overlay" class="d-flex justify-center align-center">
         <div class="loader">
             <div className="loader__outline"></div>
-            <img src="../assets/895.png" alt="Loading" className="loader__image" />
+            <img src="../assets/895.webp" alt="Loading" className="loader__image" />
         </div>
     </div>
 </template>
@@ -17,9 +17,16 @@ export default {
                 'zoukOut.jpg',
                 'Home.jpg',
                 'upcomingEvents.jpg',
-                'pastEvents.jpg',
                 'ndp.jpg',
-                'taeyeon.jpg'
+                'taeyeon.jpg',
+                '260.webp',
+                '860.webp',
+                '895.webp',
+                '1156.webp',
+                '2633.webp',
+                '4173.webp',
+                'herd1.webp',
+                'herd2.webp'
             ],
             loadedImages: 0, 
         };
